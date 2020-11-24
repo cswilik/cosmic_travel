@@ -1,0 +1,25 @@
+<p>
+  <strong>Name:</strong>
+  <%= @scientist.name %>
+</p>
+
+<%= button_to "Destroy #{@scientist.name}", scientist_path(@scientist), method: :delete %>
+
+<p>
+   <strong>Field of Study:</strong>
+  <%= @scientist.field_of_study %>
+</p>
+
+<p>
+   <strong>Planets Visited:</strong><br>
+   <% @scientist.missions.each do |mission|%>
+   <%= mission.planet.name %> ||
+   <%= mission.name %><br>
+   <% end%>
+</p>
+
+<p>
+
+
+
+
